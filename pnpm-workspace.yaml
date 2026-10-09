@@ -1,0 +1,23 @@
+allowBuilds:
+  unrs-resolver: true
+  # Git hooks are installed by scripts/install-git-hooks.mjs, which skips cleanly when there is no repository.
+  lefthook: false
+
+engineStrict: true
+savePrefix: ""
+
+overrides:
+  # eslint-config-next and eslint.config.mjs must share one typescript-eslint instance.
+  typescript-eslint: 8.70.1
+
+peerDependencyRules:
+  allowedVersions:
+    # eslint-plugin-react, -import and -jsx-a11y still declare peers only up to ESLint 9;
+    # eslint-config-next 16.4 runs them on ESLint 10.
+    eslint: "10"
+
+audit:
+  ignore:
+    # braces via eslint-config-next > @next/eslint-plugin-next > fast-glob > micromatch (dev only).
+    # No patched release exists on npm as of 2026-10-08. Remove once braces 3.0.4+ is published.
+    - GHSA-vfj7-8cjw-p6xm

@@ -1,0 +1,16 @@
+# Jobs run in order so formatting finishes before lint reads the staged files.
+pre-commit:
+  jobs:
+    - name: format
+      glob: "*.{ts,tsx,js,mjs,json,css,md,yml,yaml}"
+      run: pnpm exec prettier --write --ignore-unknown {staged_files}
+      stage_fixed: true
+    - name: lint
+      glob: "*.{ts,tsx,js,mjs}"
+      # Typed lint needs the route types that `next typegen` writes to .next/.
+      run: pnpm exec next typegen && pnpm exec eslint --max-warnings=0 --no-warn-ignored {staged_files}
+
+pre-push:
+  jobs:
+    - name: check
+      run: pnpm check

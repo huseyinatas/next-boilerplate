@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "Uygulama",
+    "description": "Next.js ile oluşturulmuş çok dilli uygulama."
+  },
+  "common": {
+    "language": "Dil"
+  },
+  "home": {
+    "title": "Hoş geldiniz",
+    "subtitle": "Geliştirmeye başlamak için src/app/[lang]/page.tsx dosyasını düzenleyin."
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "description": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.",
+    "home": "Ana sayfaya dön"
+  }
+}

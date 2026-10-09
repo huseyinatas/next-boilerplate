@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "App",
+    "description": "A multilingual application built with Next.js."
+  },
+  "common": {
+    "language": "Language"
+  },
+  "home": {
+    "title": "Welcome",
+    "subtitle": "Edit src/app/[lang]/page.tsx to get started."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for may have moved or never existed.",
+    "home": "Back to the home page"
+  }
+}
