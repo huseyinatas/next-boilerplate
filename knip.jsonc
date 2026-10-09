@@ -1,14 +1,10 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "entry": [
-    "scripts/**/*.mjs"
-  ],
+  "entry": ["scripts/**/*.mjs"],
   "ignoreExportsUsedInFile": {
-    "type": true
+    "type": true,
   },
   "treatConfigHintsAsErrors": true,
   // Part of the standard stack before the first animation lands; drop it from this list once used.
-  "ignoreDependencies": [
-    "motion"
-  ]
+  "ignoreDependencies": ["motion"],
 }
